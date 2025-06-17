@@ -88,7 +88,7 @@ const StreamerView = ({ socket, user, isStreaming, setIsStreaming }) => {
       videoRef.current.srcObject = stream;
 
       // Create stream record
-      const response = await fetch('http://localhost:5000/api/streams', {
+      const response = await fetch('https://livestreanbackend.onrender.com/api/streams', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

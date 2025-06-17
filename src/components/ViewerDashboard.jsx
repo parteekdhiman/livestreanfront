@@ -26,7 +26,7 @@ const ViewerDashboard = ({ socket, user }) => {
 
   const fetchStreams = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/streams');
+      const response = await fetch('https://livestreanbackend.onrender.com/api/streams');
       const streamsData = await response.json();
       setStreams(streamsData);
     } catch (error) {
